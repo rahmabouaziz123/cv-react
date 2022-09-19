@@ -1,6 +1,8 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@1,8..144,200&display=swap');
 
 .App-logo {
   height: 40vmin;
@@ -13,7 +15,7 @@
   }
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,7 +24,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
@@ -32,7 +34,131 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+/* tres important eviter les probleme de padding */
+*,::before , ::after {
+  box-sizing :border-box ;
+  margin : 0 ;
+  padding : 0 ;}
+  
+  
+
+
+.App > * {
+  background-color: #99b3ff;
+  padding: 45px;
+  font-family: 'Roboto Serif', serif;
+  text-align: center;
+    font-size: 20px;
+  color:#000000;
+  /* margin: 5px; */
+}
+.App {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* grid-template-rows: minmax(auto, auto); */
+  grid-template-rows: 150px 1fr ;
+  grid-gap: 1px;
+  grid-template-areas:
+   "photo photo name name name"
+   
+   "info info FormationInfo FormationInfo FormationInfo" ;
+}
+
+.img1 {
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+}
+
+header{
+  grid-area: photo;
+}
+
+section{
+  grid-area: name;
+  background-color: aliceblue !important;
+
+
+
+}
+aside{
+  grid-area: info;
+}
+
+footer {
+  grid-area: FormationInfo;
+  background-color: aliceblue !important;
+
+}
+
+.infoDetail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 20px; */
+  padding: 10px 0;
+  
+}
+
+.DivAdress{
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  /* margin-bottom: 30px; */
+}
+.Qualite{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  /* margin-bottom: 20px; */
+}
+
+.interet{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.fixeQualiteDetail{
+  margin-bottom: 20px;
+}
+.QualiteDetail{
+ 
+  padding: 10px 0;
+}
+
+.centreInteret{
+  margin-bottom: 30px;
+}
+
+.PFulName{
+  font-size: 45px;
+  
+}
+
+.imgStage{
+  width: 50px;
+}
+
+
+
+
+@media screen and (max-width:768px) {
+  .App {
+      /* grid-template-areas:
+          "photo photo photo photo photo"
+          "name name name name name"
+          "info info info info info"
+          "FormationInfo FormationInfo FormationInfo FormationInfo FormationInfo"
+      ; */
+
+      display: flex;
+      flex-direction: column;
   }
 }

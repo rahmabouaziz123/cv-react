@@ -15,30 +15,23 @@ import { StageProf } from "./Component/Profile/StageProf";
 function App() {
   return (
     <div className="App">
-      <header>
-        
-        <ProfilePhoto />
-      </header>
-
-      <section>
-       
-        <FullName />
-      </section>
-
-      <aside>
-        
+      <FullName />
+      <ProfilePhoto />
+      
+        <div className="colInfoTotal">
         <InfoDetail />
         <Address />
         <QualiteDetail />
+        {/* <LangueDetail /> */}
         <CentreInteret />
-      </aside>
-
-      <footer>
+        </div>
       
-        <FormationInfo />
-        <ParcourProfessio />
-        <StageProf />
-      </footer>
+
+      <div className="collInfoTotal2">
+      <FormationInfo />
+      <ParcourProfessio />
+      <StageProf />
+      </div>
     </div>
   );
 }
